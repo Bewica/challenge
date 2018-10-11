@@ -77,4 +77,4 @@ Afterwards train a classifier to detect Ken's emails and provide a confusion mat
 
 For your convenience we have already labeled Ken's emails in the dataset and extracted the body of the emails in a separated column.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github.com/Bewica/challenge/mail_from_ken.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bewica/challenge/blob/master/mail_from_ken.ipynb)
