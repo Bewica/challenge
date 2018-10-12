@@ -52,10 +52,10 @@ Create a `Flask` simple application which takes a string using `curl` in the fol
 ```shell
 curl -H "Content-Type: application/json" \
 -d '{"password":"pa$$word"}' \
--X GET http://localhost:5002/password_check
+-X GET http://localhost:5000/password_check
 ```
 
-Use the function of the previous exercise or just return always true or false if you skipped Objective I.
+Use the function of the previous exercise to return the strength of a password (or just return always `1` or `0` for `True` and `False` if you skipped Objective I).
 
 Create a `Dockerfile` for a docker container which serves the previous application.
 
