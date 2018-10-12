@@ -80,3 +80,5 @@ For your convenience we have already labeled Ken's emails in the dataset and ext
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bewica/challenge/blob/master/mail_from_ken.ipynb)
 
 > IMPORTANT: Make your own copy of this notebook. Otherwise everyone will be able to see your work (including other candidates)
+
+> NOTE: A training matrix with 3000 features can take a long time to compute. It's suggested to work with a small number of emails. It's ok to submit the results for a model trained with a subset of the emails even if the performance of the algorithm is not great.
