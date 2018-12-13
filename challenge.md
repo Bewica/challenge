@@ -4,7 +4,7 @@ This technical challenge has been designed to assess the technical skills of can
 
 It aims to achieve the following objectives:
 
-1. Python coding skills assessment
+1. Python or Node.js coding skills assessment
 2. Micro-service building with Docker
 3. Basic Machine Learning
 
