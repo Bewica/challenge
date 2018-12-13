@@ -16,13 +16,13 @@ It should be possible to complete any of the objectives independently.
 
 > Note: It is Ok to complete only some objectives
 
-## Objective I - Python
+## Objective I - Python or Node.js
 
-Create a Python 3 module with one function called `password_check`.
+Create a Python 3 or a Node.js module with one function called `password_check` or `passwordCheck`.
 
 Make the above function take a string parameter representing a password and return a boolean depending on the password being acceptable or not.
 
-Define a dictionary with the following keys to be used as parameters in order to check if a password is acceptable or not:
+Define a dictionary or an object with the following keys to be used as parameters in order to check if a password is acceptable or not:
 
 ```json
 {
@@ -32,7 +32,7 @@ Define a dictionary with the following keys to be used as parameters in order to
 }
 ```
 
-Make the function verify that any given password string complies with the requirements defined in the dictionary.
+Make the function verify that any given password string complies with the requirements defined in the dictionary or object.
 
 Add unit tests to verify the correct implementation of the password strength rules.
 
@@ -42,12 +42,18 @@ Make the function executable in the command line in the following way:
 $ python3 password_check.py pa$$word
 false
 ```
+or
+
+```shell
+$ node password.check.js pa$$word
+false
+```
 
 Commit the answer to GitHub or pack it in a zip file and email the results.
 
 ## Objective II - Micro-services
 
-Create a `Flask` simple application which takes a string using `curl` in the following way:
+Create a `Flask` or `Node.js` simple application which takes a string using `curl` in the following way:
 
 ```shell
 curl -H "Content-Type: application/json" \
