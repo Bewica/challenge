@@ -118,6 +118,6 @@ On this exercise we will need to create a very simple application with the follo
 
 Note that:
 
-- Credentials to access and unprotected Firestore database can be found in the [firebase.html](firebase.html) file.
+- Credentials to access and unprotected Firestore database can be found in the `firebase.html` file provided separately.
 - A number of JS libraries exist for the haveibeenpwned API.
 - Tests for the Web application are essential.
