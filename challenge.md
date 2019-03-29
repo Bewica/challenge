@@ -7,8 +7,9 @@ It aims to achieve the following objectives:
 1. Python or Node.js coding skills assessment
 2. Micro-service building with Docker
 3. Basic Machine Learning
+4. Web application
 
-The first two objectives should be able to be completed under ten minutes for an experienced programmer in that specific skill. The machine learning challenge is designed to take less than half an hour.
+The first two objectives should be able to be completed under ten minutes for an experienced programmer in that specific skill. The machine learning and web application challenges are designed to take less than half an hour each.
 
 The challenge should be representative of the technologies use in the company.
 
@@ -75,7 +76,7 @@ In this challenge we're going to use machine learning to automatically detect if
 
 Now imagine that you're a worker from Enron in the year 2000 and you receive an email from the boss [Ken Lay](https://en.wikipedia.org/wiki/Kenneth_Lay) asking you to pay a huge invoice. Fortunately you have access to the email servers files and you can use machine learning to find out if the email is genuine.
 
-![The boss](https://upload.wikimedia.org/wikipedia/commons/c/ce/Ken_Lay.jpg)
+![Enron](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_de_Enron.svg/200px-Logo_de_Enron.svg.png)
 
 Use the following Colab notebook to create a feature vector of 3000 features for each email in the Enron dataset. Populate each feature with the number of times each of the 3000 most frequent English words appears in the email.
 
@@ -88,3 +89,35 @@ For your convenience we have already labeled Ken's emails in the dataset and ext
 > IMPORTANT: Make your own copy of this notebook. Otherwise everyone will be able to see your work (including other candidates)
 
 > NOTE: A training matrix with 3000 features can take a long time to compute. It's suggested to work with a small number of emails. It's ok to submit the results for a model trained with a subset of the emails even if the performance of the algorithm is not great.
+
+## Objective IV - Web application
+
+Cyber security threats evolve over time as well as companies infrastructure. A company's chief information security officer (CISO) should always have an up to date view of the security situation of their company. For this reason, security scans will happen asynchronously in the background and need to be shown to users as soon as they become available.
+
+On this exercise we will need to create a very simple application with the following functionality:
+
+- A React interface that will allow to add users to a Firestore collection named `users`. Each user will have a `name`, `surname` and `email` field.
+- A Node.js backed with a route that will allow to check if a certain email has been compromised against the [';--have i been pwned?](https://haveibeenpwned.com/) database of compromised email addresses. This backend function won't return the result and instead will store it directly in Firebase in a new field for the existing user document called `isBreached`.
+- The web application will display the breach results for the existing users as soon as they become available in the users collection.
+
+```
++-------------+          +-------------+
+|             |          |             |
+|   Crawler   +----------> Realtime DB |
+|  (Node.js)  |          | (Firestore) |
+|             |          |             |
++---+---------+          +-----^-------+
+    ^                          |
+    |                   +------v---+
+    |                   |          |
+    +-------------------+ Web app. |
+                        | (React)  |
+                        |          |
+                        +----------+
+```
+
+Note that:
+
+- Credentials to access and unprotected Firestore database can be found in the [firebase.html](firebase.html) file.
+- A number of JS libraries exist for the haveibeenpwned API.
+- Tests for the Web application are essential.
