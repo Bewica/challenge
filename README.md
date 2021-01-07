@@ -74,29 +74,7 @@ Create a `Dockerfile` for a docker container which serves the previous applicati
 
 Create a `docker-compose.yml` file to serve the previous file.
 
-## Objective III - Basic machine learning
-
-One of the most common problems companies face is CEO impersonation attacks. This is a form of fraud where a scammer sends an email purporting to be from the CEO of a company or another senior executive and commonly requesting the finance team to make a payment to a third party.
-
-In this challenge we're going to use machine learning to automatically detect if an email from a person is legitimate. For that purpose we're going to use the corpus of emails from Enron. You can learn more about the [Enron](https://en.wikipedia.org/wiki/Enron_scandal) scandal in the Wikipedia.
-
-Now imagine that you're a worker from Enron in the year 2000 and you receive an email from the boss [Ken Lay](https://en.wikipedia.org/wiki/Kenneth_Lay) asking you to pay a huge invoice. Fortunately you have access to the email servers files and you can use machine learning to find out if the email is genuine.
-
-![Enron](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_de_Enron.svg/200px-Logo_de_Enron.svg.png)
-
-Use the following Colab notebook to create a feature vector of 3000 features for each email in the Enron dataset. Populate each feature with the number of times each of the 3000 most frequent English words appears in the email.
-
-Afterwards train a classifier to detect Ken's emails and provide a confusion matrix of the performance.
-
-For your convenience we have already labeled Ken's emails in the dataset and extracted the body of the emails in a separated column.
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bewica/challenge/blob/master/mail_from_ken.ipynb)
-
-> IMPORTANT: Make your own copy of this notebook. Otherwise everyone will be able to see your work (including other candidates)
-
-> NOTE: A training matrix with 3000 features can take a long time to compute. It's suggested to work with a small number of emails. It's ok to submit the results for a model trained with a subset of the emails even if the performance of the algorithm is not great.
-
-## Objective IV - Web application
+## Objective III - Web application
 
 Cyber security threats evolve over time as well as companies infrastructure. A company's chief information security officer (CISO) should always have an up to date view of the security situation of their company. For this reason, security scans will happen asynchronously in the background and need to be shown to users as soon as they become available.
 
@@ -127,3 +105,25 @@ Note that:
 - Credentials to access and unprotected Firestore database will be provided separately as a challenges-*.json file.
 - A number of JS libraries exist for the haveibeenpwned API.
 - Tests for the Web application are essential.
+
+## Optional: Objective IV - Basic machine learning
+
+One of the most common problems companies face is CEO impersonation attacks. This is a form of fraud where a scammer sends an email purporting to be from the CEO of a company or another senior executive and commonly requesting the finance team to make a payment to a third party.
+
+In this challenge we're going to use machine learning to automatically detect if an email from a person is legitimate. For that purpose we're going to use the corpus of emails from Enron. You can learn more about the [Enron](https://en.wikipedia.org/wiki/Enron_scandal) scandal in the Wikipedia.
+
+Now imagine that you're a worker from Enron in the year 2000 and you receive an email from the boss [Ken Lay](https://en.wikipedia.org/wiki/Kenneth_Lay) asking you to pay a huge invoice. Fortunately you have access to the email servers files and you can use machine learning to find out if the email is genuine.
+
+![Enron](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_de_Enron.svg/200px-Logo_de_Enron.svg.png)
+
+Use the following Colab notebook to create a feature vector of 3000 features for each email in the Enron dataset. Populate each feature with the number of times each of the 3000 most frequent English words appears in the email.
+
+Afterwards train a classifier to detect Ken's emails and provide a confusion matrix of the performance.
+
+For your convenience we have already labeled Ken's emails in the dataset and extracted the body of the emails in a separated column.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Bewica/challenge/blob/master/mail_from_ken.ipynb)
+
+> IMPORTANT: Make your own copy of this notebook. Otherwise everyone will be able to see your work (including other candidates)
+
+> NOTE: A training matrix with 3000 features can take a long time to compute. It's suggested to work with a small number of emails. It's ok to submit the results for a model trained with a subset of the emails even if the performance of the algorithm is not great.
