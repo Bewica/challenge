@@ -4,7 +4,7 @@ This technical challenge has been designed to assess the technical skills of can
 
 It aims to achieve the following objectives:
 
-1. Python or Node.js coding skills assessment
+1. Go, Node.js or Python coding skills assessment
 2. Micro-service building with Docker
 3. Basic Machine Learning
 4. Web application
@@ -17,9 +17,9 @@ It should be possible to complete any of the objectives independently.
 
 > Note: It is Ok to complete only some objectives
 
-## Objective I - Python or Node.js
+## Objective I - Go, Node.js or Python
 
-Create a Python 3 or a Node.js module with one function called `password_check` or `passwordCheck`.
+Create a Go, Node.js or Python 3 module with one function called `password_check` or `passwordCheck`.
 
 Make the above function take a string parameter representing a password and return a boolean depending on the password being acceptable or not.
 
@@ -40,7 +40,7 @@ Add unit tests to verify the correct implementation of the password strength rul
 Make the function executable in the command line in the following way:
 
 ```shell
-$ python3 password_check.py pa$$word
+$ go run passwordCheck.go pa$$word
 false
 ```
 or
@@ -49,12 +49,18 @@ or
 $ node password.check.js pa$$word
 false
 ```
+or
+
+```shell
+$ python3 password_check.py pa$$word
+false
+```
 
 Commit the answer to GitHub or pack it in a zip file and email the results.
 
 ## Objective II - Micro-services
 
-Create a `Flask` or `Node.js` simple application which takes a string using `curl` in the following way:
+Create a `Go`, `Node.js` or `Flask` simple application which takes a string using `curl` in the following way:
 
 ```shell
 curl -H "Content-Type: application/json" \
@@ -97,7 +103,7 @@ Cyber security threats evolve over time as well as companies infrastructure. A c
 On this exercise we will need to create a very simple application with the following functionality:
 
 - A React interface that will allow to add users to a Firestore collection named `users`. Each user will have a `name`, `surname` and `email` field.
-- A Node.js backed with a route that will allow to check if a certain email has been compromised against the [';--have i been pwned?](https://haveibeenpwned.com/) database of compromised email addresses. This backend function won't return the result and instead will store it directly in Firebase in a new field for the existing user document called `isBreached`.
+- A Node.js backed with a route that will allow to check if a certain email has been compromised against the [';--have i been pwned?](https://haveibeenpwned.com/) database of compromised email addresses. This backend function won't return the result and instead will store it directly in Firebase in a new field for the existing user document called `isBreached`. Version 3 of the haveibeenpwned api now requires a subscription, you can mock an api response instead.
 - The web application will display the breach results for the existing users as soon as they become available in the users collection.
 
 ```
@@ -118,6 +124,6 @@ On this exercise we will need to create a very simple application with the follo
 
 Note that:
 
-- Credentials to access and unprotected Firestore database can be found in the `firebase.html` file provided separately.
+- Credentials to access and unprotected Firestore database will be provided separately as a challenges-*.json file.
 - A number of JS libraries exist for the haveibeenpwned API.
 - Tests for the Web application are essential.
